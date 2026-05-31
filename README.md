@@ -55,7 +55,7 @@ cp -r freash_grean /path/to/xampp/htdocs/
 # (Start Apache in XAMPP Control Panel)
 
 # 3. Open browser
-http://localhost/freash_grean/home.php
+http://localhost/freash_grean/index.php
 ```
 
 ---
@@ -64,7 +64,7 @@ http://localhost/freash_grean/home.php
 
 ```
 freash_grean/
-├── home.php, About_Us.php, Our_Products.php
+├── index.php, About_Us.php, Our_Products.php
 ├── Contact_Us.php, Outlets.php, Supply.php
 ├── News.php, Careers.php
 ├── assests/
