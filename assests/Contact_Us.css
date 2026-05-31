@@ -1,0 +1,209 @@
+
+/* Contact Us Page - Responsive Mobile First */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: var(--sp-md);
+  padding: var(--sp-md);
+}
+
+.about_1 {
+  width: 100%;
+  max-width: 100%;
+  min-height: clamp(200px, 40vh, 400px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: background-image 1s ease;
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  border-radius: var(--radius);
+  padding: var(--sp-lg);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.about .content h2 {
+  color: var(--color-primary);
+  margin: 0 0 var(--sp-lg) 0;
+  font-size: var(--fs-h2);
+}
+
+.about .content p {
+  margin: 0 0 var(--sp-md) 0;
+  font-size: var(--fs-p);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+span {
+  font-size: var(--fs-base);
+  color: var(--color-accent);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+label {
+  margin: 0;
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--sp-xs);
+}
+
+input,
+textarea {
+  padding: var(--sp-md);
+  margin-bottom: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: var(--fs-base);
+  transition: var(--transition);
+  width: 100%;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  outline: 2px solid rgba(0, 128, 0, 0.1);
+  outline-offset: 0;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  padding: var(--sp-md) var(--sp-lg);
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: var(--touch-min);
+  margin-top: var(--sp-md);
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
+}
+
+button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Tablet - side by side layout */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    gap: var(--sp-lg);
+    align-items: flex-start;
+    padding: var(--sp-lg);
+  }
+  
+  .about_1 {
+    flex: 0 0 clamp(250px, 30%, 350px);
+    min-height: clamp(300px, 35vh, 450px);
+  }
+  
+  .content {
+    flex: 1 1 auto;
+    min-height: auto;
+  }
+}
+
+/* Laptop and above */
+@media (min-width: 1024px) {
+  .about {
+    gap: var(--sp-xl);
+  }
+  
+  .about_1 {
+    min-height: 500px;
+  }
+  
+  .content {
+    padding: var(--sp-xl);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .about {
+    padding: var(--sp-xl);
+  }
+}
+
+/* 4K Screens */
+@media (min-width: 2560px) {
+  .about {
+    padding: 40px;
+  }
+  
+  .content {
+    padding: 40px;
+  }
+}
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4cc14c;
+}
+
+
+
+@media (max-width: 768px) {
+    .about{
+     display: flex;
+     flex-direction: column;
+     margin:0 ;
+     margin-left: 11px;
+    }
+     .about_1{
+         height: 200px;
+     }
+    .content{
+     width: 320px;
+     height: 500px;
+     overflow: scroll;
+    }
+ }

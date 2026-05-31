@@ -1,0 +1,148 @@
+/* Outlets Page - Responsive Mobile First */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: var(--sp-md);
+  padding: var(--sp-md);
+}
+
+.about_1 {
+  width: 100%;
+  max-width: 100%;
+  min-height: clamp(200px, 40vh, 400px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: background-image 1s ease;
+  margin: 0;
+}
+
+.content {
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  border-radius: var(--radius);
+  padding: var(--sp-lg);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.about .content h2 {
+  color: var(--color-primary);
+  margin: 0 0 var(--sp-lg) 0;
+  font-size: var(--fs-h2);
+}
+
+.about .content p {
+  margin: 0 0 var(--sp-md) 0;
+  font-size: var(--fs-p);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+span {
+  font-size: var(--fs-base);
+  color: var(--color-accent);
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Maps Container */
+.map {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg);
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  max-width: 100%;
+  height: clamp(250px, 40vh, 400px);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  margin: 0;
+  padding: 0;
+}
+
+/* Tablet - side by side */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    gap: var(--sp-lg);
+    align-items: flex-start;
+    padding: var(--sp-lg);
+  }
+  
+  .about_1 {
+    flex: 0 0 clamp(250px, 30%, 350px);
+    min-height: clamp(300px, 35vh, 450px);
+  }
+  
+  .content {
+    flex: 1 1 auto;
+  }
+  
+  .map {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .map iframe {
+    flex: 1 1 calc(50% - var(--sp-sm));
+    min-width: 280px;
+  }
+}
+
+/* Laptop and above */
+@media (min-width: 1024px) {
+  .about {
+    gap: var(--sp-xl);
+  }
+  
+  .about_1 {
+    min-height: 500px;
+  }
+  
+  .content {
+    padding: var(--sp-xl);
+  }
+  
+  .map iframe {
+    height: 450px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .about {
+    padding: var(--sp-xl);
+  }
+  
+  .map iframe {
+    height: 500px;
+  }
+}
+
+/* 4K Screens */
+@media (min-width: 2560px) {
+  .about {
+    padding: 40px;
+  }
+  
+  .content {
+    padding: 40px;
+  }
+  
+  .map iframe {
+    height: 600px;
+  }
+}

@@ -1,0 +1,189 @@
+
+/* Our Products Page - Responsive Mobile First */
+
+body {
+  font-family: Arial, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: var(--sp-md);
+  padding: var(--sp-md);
+}
+
+.about_1 {
+  width: 100%;
+  max-width: 100%;
+  min-height: clamp(200px, 40vh, 400px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: background-image 1s ease;
+  margin: 0;
+  z-index: -1;
+}
+
+.content {
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  border-radius: var(--radius);
+  padding: var(--sp-lg);
+  z-index: 1;
+}
+
+.content h2 {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: var(--fs-h2);
+  margin: 0 0 var(--sp-lg) 0;
+}
+
+/* Product Grid - Mobile First */
+.about .content .container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+  gap: var(--sp-md);
+  padding: 0;
+}
+
+.about .content .container img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.about .content .container .label {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-min);
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: whitesmoke;
+  border-radius: var(--radius);
+  padding: var(--sp-sm);
+  font-size: var(--fs-sm);
+}
+
+.about .content .container .item {
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.about .content .container .item:hover {
+  transform: scale(1.05);
+}
+
+/* Tablet - 3 columns */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    gap: var(--sp-lg);
+    align-items: flex-start;
+    padding: var(--sp-lg);
+  }
+  
+  .about_1 {
+    flex: 0 0 clamp(250px, 30%, 350px);
+    min-height: clamp(300px, 35vh, 450px);
+  }
+  
+  .content {
+    flex: 1 1 auto;
+  }
+  
+  .about .content .container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  
+  .about .content .container img {
+    max-width: 130px;
+  }
+}
+
+/* Laptop - 4 columns */
+@media (min-width: 1024px) {
+  .about {
+    gap: var(--sp-xl);
+  }
+  
+  .about_1 {
+    min-height: 500px;
+  }
+  
+  .content {
+    padding: var(--sp-xl);
+  }
+  
+  .about .content .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .about .content .container img {
+    max-width: 150px;
+  }
+}
+
+/* Desktop - 5 columns */
+@media (min-width: 1440px) {
+  .about {
+    padding: var(--sp-xl);
+  }
+  
+  .about .content .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .about .content .container img {
+    max-width: 160px;
+  }
+}
+
+/* 4K Screens */
+@media (min-width: 2560px) {
+  .about {
+    padding: 40px;
+  }
+  
+  .content {
+    padding: 40px;
+  }
+  
+  .about .content .container {
+    gap: 30px;
+  }
+  
+  .about .content .container img {
+    max-width: 200px;
+  }
+}
+
+ .item{
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.338);
+    padding: 3px;
+ }
+ .about .content .container{
+    grid-template-columns: repeat(1,1fr);
+ }
+
+ .about .content .container img{
+       width: 120px;
+       height: 120px;
+       margin-left: 75px;
+ }
+}

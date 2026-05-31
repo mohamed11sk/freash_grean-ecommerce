@@ -1,0 +1,49 @@
+
+/* Home Page - Responsive Mobile First */
+
+.content {
+  width: 100%;
+  max-width: min(94%, 600px);
+  min-height: clamp(250px, 50vh, 500px);
+  margin: var(--sp-lg) auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: scroll;
+  transition: background-image 1s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Tablet - increase content area */
+@media (min-width: 768px) {
+  .content {
+    min-height: clamp(300px, 40vh, 600px);
+    max-width: min(90%, 700px);
+  }
+}
+
+/* Laptop and above */
+@media (min-width: 1024px) {
+  .content {
+    max-width: 900px;
+    min-height: 500px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .content {
+    max-width: 1000px;
+    min-height: 600px;
+  }
+}
+
+/* 4K Screens */
+@media (min-width: 2560px) {
+  .content {
+    max-width: 1200px;
+    min-height: 700px;
+  }
+}
