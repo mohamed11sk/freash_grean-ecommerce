@@ -217,14 +217,7 @@ Total JS:             ~2 KB
 
 ---
 
-## 📞 Support & Contact
 
-### 🤝 Get Help
-
-- 📧 **Email**: info@allgreen.eg
-- 📱 **Phone**: +20 2 XXXX XXXX
-- 🌐 **Website**: www.allgreen.eg
-- 📍 **Address**: Cairo, Egypt
 
 ### 🐛 Report Issues
 
